@@ -7,9 +7,9 @@ This lab simulates an enterprise local area network featuring a Layer 3 Distribu
 
 * **Topology Components:**
   * **DSW1 (WS-C3560-24TS):** Primary Layer 3 distribution switch managing gateway interfaces.
-  * **SW1 (WS-C2960-24TT-L):** Layer 2 access switch connected to `DSW1` via a trunk link (`Gi0/1`)[cite: 1].
-  * **PC1 (`20.0.0.10/24`):** Connected to `SW1` on port `FastEthernet0/2` (VLAN 20 / Tech)[cite: 1].
-  * **PC2 (`10.0.0.10/24`):** Connected to `SW1` on port `FastEthernet0/1` (VLAN 10 / Sales)[cite: 1].
+  * **SW1 (WS-C2960-24TT-L):** Layer 2 access switch connected to `DSW1` via a trunk link (`Gi0/1`)
+  * **PC1 (`20.0.0.10/24`):** Connected to `SW1` on port `FastEthernet0/2` (VLAN 20 / Tech)
+  * **PC2 (`10.0.0.10/24`):** Connected to `SW1` on port `FastEthernet0/1` (VLAN 10 / Sales)
 
 ---
 
