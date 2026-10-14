@@ -48,8 +48,8 @@ interface Vlan20
  ip address 20.0.0.1 255.255.255.0
  no shutdown
 exit
+
 Layer 2 Access Switch (SW1)
-Code snippet
 enable
 configure terminal
 ! Define VLAN database
@@ -81,14 +81,10 @@ exit
 Verify proper operational state and forwarding behavior using the following CLI diagnostic commands:
 
 Verify Active VLANs:
-
-Code snippet
 show vlan brief
 Verification: Confirm that VLAN 10 and VLAN 20 are listed as active and assigned to their corresponding interface ports[cite: 1].
 
 Verify Layer 3 Routing Table:
-
-Code snippet
 show ip route
 Verification: Ensure directly connected networks (10.0.0.0/24 and 20.0.0.0/24) appear in the routing table.
 
