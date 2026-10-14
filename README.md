@@ -1,4 +1,5 @@
 # Network-lab-writeups
+
 # Enterprise Network Lab: Inter-VLAN Routing & SVI Configuration
 
 ## 1. Network Topology Overview
@@ -47,3 +48,59 @@ interface Vlan20
  ip address 20.0.0.1 255.255.255.0
  no shutdown
 exit
+Layer 2 Access Switch (SW1)
+Code snippet
+enable
+configure terminal
+! Define VLAN database
+vlan 10
+ name Sales
+vlan 20
+ name Tech
+exit
+
+! Configure trunk port toward DSW1
+interface GigabitEthernet0/1
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20
+ no shutdown
+
+! Configure access port for PC2
+interface FastEthernet0/1
+ switchport mode access
+ switchport access vlan 10
+ no shutdown
+
+! Configure access port for PC1
+interface FastEthernet0/2
+ switchport mode access
+ switchport access vlan 20
+ no shutdown
+exit
+4. Verification & Testing
+Verify proper operational state and forwarding behavior using the following CLI diagnostic commands:
+
+Verify Active VLANs:
+
+Code snippet
+show vlan brief
+Verification: Confirm that VLAN 10 and VLAN 20 are listed as active and assigned to their corresponding interface ports[cite: 1].
+
+Verify Layer 3 Routing Table:
+
+Code snippet
+show ip route
+Verification: Ensure directly connected networks (10.0.0.0/24 and 20.0.0.0/24) appear in the routing table.
+
+End-to-End Connectivity Check:
+From PC2 (10.0.0.10), ping across the gateway to PC1[cite: 1]:
+
+Bash
+ping 20.0.0.10
+Verification: Successful ICMP echo replies confirm that Layer 2 trunking and Layer 3 SVI routing are functioning correctly.
+
+
+<Elicitations message="What would you like to do next?">
+  <Elicitation label="Add OSPF protocol configuration" query="Can you add OSPF routing configuration to this lab write-up?"/>
+  <Elicitation label="Configure GitHub Pages site" query="How do I verify that my GitHub Pages deployment is active?"/>
+</Elicitations>
