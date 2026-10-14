@@ -1,4 +1,3 @@
-# Network-lab-writeups
 
 # Enterprise Network Lab: Inter-VLAN Routing & SVI Configuration
 <img width="480" height="492" alt="image" src="https://github.com/user-attachments/assets/609a0a66-665a-4e5c-a60a-56e4c1f06a8c" />
