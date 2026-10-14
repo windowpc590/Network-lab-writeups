@@ -77,6 +77,7 @@ interface FastEthernet0/2
  switchport access vlan 20
  no shutdown
 exit
+
 4. Verification & Testing
 Verify proper operational state and forwarding behavior using the following CLI diagnostic commands:
 
@@ -91,12 +92,7 @@ Verification: Ensure directly connected networks (10.0.0.0/24 and 20.0.0.0/24) a
 End-to-End Connectivity Check:
 From PC2 (10.0.0.10), ping across the gateway to PC1[cite: 1]:
 
-Bash
+#Bash
 ping 20.0.0.10
 Verification: Successful ICMP echo replies confirm that Layer 2 trunking and Layer 3 SVI routing are functioning correctly.
 
-
-<Elicitations message="What would you like to do next?">
-  <Elicitation label="Add OSPF protocol configuration" query="Can you add OSPF routing configuration to this lab write-up?"/>
-  <Elicitation label="Configure GitHub Pages site" query="How do I verify that my GitHub Pages deployment is active?"/>
-</Elicitations>
