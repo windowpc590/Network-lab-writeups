@@ -17,8 +17,8 @@ This lab simulates an enterprise local area network featuring a Layer 3 Distribu
 
 | VLAN ID | Name | Subnet / Mask | Gateway IP | Connected Port |
 | :--- | :--- | :--- | :--- | :--- |
-| **VLAN 10** | Sales | `10.0.0.0/24` | `10.0.0.1` | `SW1` / `Fa0/1` (PC2)[cite: 1] |
-| **VLAN 20** | Tech | `20.0.0.0/24` | `20.0.0.1` | `SW1` / `Fa0/2` (PC1)[cite: 1] |
+| **VLAN 10** | Sales | `10.0.0.0/24` | `10.0.0.1` | `SW1` / `Fa0/1` (PC2) |
+| **VLAN 20** | Tech | `20.0.0.0/24` | `20.0.0.1` | `SW1` / `Fa0/2` (PC1) |
 
 ---
 
