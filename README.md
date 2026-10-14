@@ -1,7 +1,7 @@
 # Network-lab-writeups
 
 # Enterprise Network Lab: Inter-VLAN Routing & SVI Configuration
-<img width="818" height="682" alt="image" src="https://github.com/user-attachments/assets/16a6d785-46da-4220-bffb-a6f25d284080" />
+<img width="480" height="492" alt="image" src="https://github.com/user-attachments/assets/609a0a66-665a-4e5c-a60a-56e4c1f06a8c" />
 
 ## 1. Network Topology Overview
 This lab simulates an enterprise local area network featuring a Layer 3 Distribution Switch (`DSW1`), a Layer 2 Access Switch (`SW1`), and two endpoint workstations (`PC1` and `PC2`) operating across isolated broadcast domains. Inter-VLAN routing is provisioned via Switched Virtual Interfaces (SVIs) to facilitate inter-subnet communication.
