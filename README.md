@@ -1,6 +1,7 @@
 # Network-lab-writeups
 
 # Enterprise Network Lab: Inter-VLAN Routing & SVI Configuration
+<img width="818" height="682" alt="image" src="https://github.com/user-attachments/assets/16a6d785-46da-4220-bffb-a6f25d284080" />
 
 ## 1. Network Topology Overview
 This lab simulates an enterprise local area network featuring a Layer 3 Distribution Switch (`DSW1`), a Layer 2 Access Switch (`SW1`), and two endpoint workstations (`PC1` and `PC2`) operating across isolated broadcast domains. Inter-VLAN routing is provisioned via Switched Virtual Interfaces (SVIs) to facilitate inter-subnet communication.
@@ -79,20 +80,16 @@ interface FastEthernet0/2
 exit
 
 4. Verification & Testing
-Verify proper operational state and forwarding behavior using the following CLI diagnostic commands:
-
-Verify Active VLANs:
 show vlan brief
-Verification: Confirm that VLAN 10 and VLAN 20 are listed as active and assigned to their corresponding interface ports[cite: 1].
+Verification: Confirm that VLAN 10 and VLAN 20 are listed as active and assigned to their corresponding interface ports.
 
 Verify Layer 3 Routing Table:
 show ip route
 Verification: Ensure directly connected networks (10.0.0.0/24 and 20.0.0.0/24) appear in the routing table.
 
 End-to-End Connectivity Check:
-From PC2 (10.0.0.10), ping across the gateway to PC1[cite: 1]:
+From PC2 (10.0.0.10), ping across the gateway to PC1:
 
-#Bash
 ping 20.0.0.10
 Verification: Successful ICMP echo replies confirm that Layer 2 trunking and Layer 3 SVI routing are functioning correctly.
 
